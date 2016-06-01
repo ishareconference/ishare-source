@@ -1,0 +1,123 @@
+.schedule {
+  position: relative;
+  padding: 25px 20px 50px;
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+  @media(min-width: 750px) { padding: 25px 40px 50px; }
+  @media(min-width: 1000px) { padding: 25px 0 50px; }
+  hr {
+    position: absolute;
+    bottom: -8px;
+    left: -200vh;
+    z-index: -1;
+    width: 400vh;
+    border: none;
+    border-bottom: 1px solid @blue;
+  }
+  #timeline {
+    position: relative;
+    z-index: -2;
+    height: 770px;
+    width: 2px;
+    margin-left: 77px;
+    background-color: #444;
+    #timeIndicator {
+      display: none;
+      position: absolute;
+      height: 0;
+      width: 2px;
+      background-color: #c8c9b9;
+      transition: height 0.7s ease-in-out;
+      #timeIndicatorTip {
+        position: absolute;
+        bottom: -20px;
+        z-index: 1;
+        margin-left: -20px;
+        .front {
+          fill: fadeOut(@blue, 10);
+        }
+        #back2 {
+          fill: transparent;
+          stroke: fadeOut(@blue, 30);
+        }
+      }
+    }
+    .date {
+      position: absolute;
+      left: -87px;
+      width: 70px;
+      margin-top: -8px;
+      color: #444;
+      font-size: 1.1rem;
+      font-weight: 700;
+      text-align: right;
+      text-transform: uppercase;
+    }
+    .dash {
+      position: absolute;
+      left: -4px;
+      display: block;
+      width: 10px;
+      height: 2px;
+      background-color: #444;
+    }
+    .time {
+      position: absolute;
+      left: -87px;
+      z-index: 1;
+      width: 70px;
+      margin-top: -5px;
+      font-size: 1.1rem;
+      text-align: right;
+      transition: color 0.3s linear;
+    }
+    .tick {
+      position: absolute;
+      left: -3px;
+      z-index: 0;
+      display: block;
+      height: 8px;
+      width: 8px;
+      border-radius: 50%;
+      transition: background-color 0.3s linear;
+    }
+    .event {
+      position: absolute;
+      left: 88px;
+      z-index: 1;
+      width: 300px;
+      margin-top: -8px;
+      font-size: 1.4rem;
+      transition: color 0.3s linear;
+      &:before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 11px;
+        left: -67px;
+        height: 1px;
+        width: 50px;
+        background-color: rgba(0,0,0,0.3);
+      }
+    }
+  }
+  h2 {
+    margin-top: -15px;
+    font-weight: 400;
+  }
+  ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    .mark {
+      display: inline-block;
+      height: 7px;
+      width: 7px;
+      margin-right: 7px;
+      margin-bottom: 2px;
+      border-radius: 50%;
+    }
+  }
+  .locations {
+    margin-bottom: 50px;
+  }
+}

@@ -1,0 +1,45 @@
+button,
+.button {
+  display: inline-block;
+  height: 36px;
+  padding: 0 20px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  white-space: nowrap;
+  background: none;
+  border: none;
+  border-radius: 4px;
+  outline: 0;
+  &.solid-primary {
+
+  }
+  &.solid-accent {
+    color: @dark-blue;
+    background: @yellow;
+  }
+  &.hollow-primary {
+    height: 34px;
+    color: rgba(255,255,255,0.9);
+    border: 2px solid rgba(255,255,255,0.9);
+    transition: all 0.1s linear;
+    &:hover {
+      color: #fff;
+      border-color: #fff;
+    }
+  }
+  &.hollow-dark {
+    height: 34px;
+    color: #444;
+    border: 2px solid #444;
+    transition: all 0.1s linear;
+    &:hover {
+      color: #111;
+      border-color: #111;
+    }
+  }
+  &.hollow-accent {
+
+  }
+}
