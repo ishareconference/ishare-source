@@ -13,7 +13,13 @@
     padding: 0;
     text-align: left;
   }
-  .btn { margin: 50px 0; }
+  .btn {
+    &:first-of-type { margin-top: 50px; margin-bottom: 20px }
+    &:last-of-type { margin-bottom: 50px; }
+    @media(min-width: 750px) {
+      margin: 50px 0;
+    }
+  }
   h1 {
     margin: 100px 0 50px;
     font-size: 5rem;
